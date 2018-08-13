@@ -1,0 +1,29 @@
+body {
+  background-image: url("/assets/images/food/food.png")
+}
+
+#headerpic {
+  width: 200px;
+  height: 200px;
+}
+
+.stuff {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.burgerItem {
+  padding: 10px;
+  margin: 5px;
+  background-color: brown;
+  border-radius: 5px;
+  height: 60px;
+}
+
+.burgerItem .col-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

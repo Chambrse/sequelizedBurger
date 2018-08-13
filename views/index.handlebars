@@ -1,0 +1,42 @@
+<div class="container">
+    <h1>Burger Town!</h1>
+    <div class="row stuff">
+        <img src="/assets/images/burger-logo-cafe-logo-restaurant-logo-burger-cartoon-85843172.jpg" id="headerpic" />
+    </div>
+    <hr>
+    <p>Welcome to Burger Town! Devour a burger or place an order below.</p>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <h3>Fresh n Hot</h3>
+            {{#each burgers}} {{#unless devoured}}
+
+            <div class="row burgerItem">
+                <div class="col-8">
+                    {{ id }}: {{burger_name}}
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-secondary devourButton" burger_id="{{ id }}">Devour!</button>
+                </div>
+            </div>
+
+            {{/unless}} {{/each}}
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h3>Devoured</h3>
+
+            {{#each burgers}} {{#if devoured}}
+
+            <div class="row burgerItem">
+                {{ id }}: {{burger_name}}
+            </div>
+
+            {{/if}} {{/each}}
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <form class="form-group" style="margin-top: 25px">
+            <input type="text" id="addBurger" placeholder="Enter a burger you'd like to devour!">
+            <button type="submit" id="addBurgerSubmit">Submit</button>
+        </form>
+    </div>
+</div>
